@@ -1,0 +1,12 @@
+{
+  "name": "insure-pro-assignment",
+  "version": "1.0.0",
+  "description": "Sales analysis assignment",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
