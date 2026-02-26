@@ -1,0 +1,9 @@
+Q1: What was the most complex part of the assignment for you personally and why?
+A: Calculating the month-over-month growth percentage per item. Getting total sales was straightforward, but tracking growth meant carefully structuring the maps to compare previous and current months efficiently. I had to handle edge cases—like division-by-zero for new items
+
+Q2: Describe a bug you expect to hit while implementing this and how you would debug it.
+A: Definitely floating-point precision issues in JavaScript when validating Unit Price * Quantity != Total Price.
+I would fix it by either rounding to two decimal places or converting the rupees to paise (multiplying by 100 to use integers) before running the comparison.
+
+Q3: Does your solution handle larger data sets without any performance implications?
+A: For this dataset's size, loading it into memory with maps and lists works perfectly. But if we scaled up to millions of rows, it would eventually hit Node's heap limit. To handle that, I'd refactor it to use Node.js Streams (fs.createReadStream), processing and validating the CSV chunk-by-chunk without keeping the whole file in memory.
