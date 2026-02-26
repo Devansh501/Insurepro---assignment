@@ -1,0 +1,49 @@
+Data Inconsistency Detected:
+	Row: 2019-03-01,Vanilla Single Scoop,50,4,100
+	Reasons: Unit Price * Quantity != Total Price
+
+Data Inconsistency Detected:
+	Row: 2019-03-01,Cafe Caramel,160,0,160
+	Reasons: Unit Price * Quantity != Total Price, Quantity < 1
+
+1. Total Sales: 18820
+2. Month-wise Sales: { '2019-01': 6910, '2019-02': 5530, '2019-03': 6380 }
+
+3. Most Popular Item Each Month:
+2019-01 {
+  item: 'Butterscotch Single Scoop',
+  minOrders: 3,
+  maxOrders: 5,
+  avgOrders: 4.33
+}
+2019-02 {
+  item: 'Vanilla Single Scoop',
+  minOrders: 2,
+  maxOrders: 5,
+  avgOrders: 3.5
+}
+2019-03 { item: 'Cake Fudge', minOrders: 1, maxOrders: 5, avgOrders: 3.33 }
+
+4. Highest Revenue Item Each Month:
+2019-01 { item: 'Hot Chocolate Fudge', revenue: 1560 }
+2019-02 { item: 'Hot Chocolate Fudge', revenue: 1440 }
+2019-03 { item: 'Cake Fudge', revenue: 3000 }
+
+5. Month-to-Month Growth Rate Per Item:
+{
+  'Death by Chocolate': { '2019-01 to 2019-02': '-66.67%', '2019-02 to 2019-03': '0.00%' },
+  'Cake Fudge': { '2019-01 to 2019-02': '-30.00%', '2019-02 to 2019-03': '185.71%' },
+  'Vanilla Double Scoop': { '2019-01 to 2019-02': '100.00%', '2019-02 to 2019-03': '-92.86%' },
+  'Butterscotch Single Scoop': { '2019-01 to 2019-02': '-53.85%', '2019-02 to 2019-03': '0.00%' },
+  'Vanilla Single Scoop': { '2019-01 to 2019-02': '180.00%', '2019-02 to 2019-03': '-64.29%' },
+  'Hot Chocolate Fudge': { '2019-01 to 2019-02': '-7.69%', '2019-02 to 2019-03': '-75.00%' },
+  'Chocolate Europa Double Scoop': { '2019-01 to 2019-02': '-100.00%', '2019-02 to 2019-03': '0.00%' },
+  'Caramel Crunch Single Scoop': { '2019-01 to 2019-02': '-100.00%', '2019-02 to 2019-03': '0.00%' },
+  'Cafe Caramel': { '2019-01 to 2019-02': '-60.00%', '2019-02 to 2019-03': '200.00%' },
+  'Pista Single Scoop': {
+    '2019-01 to 2019-02': 'Infinity%',
+    '2019-02 to 2019-03': '-66.67%'
+  },
+  Trilogy: { '2019-01 to 2019-02': '0.00%', '2019-02 to 2019-03': 'Infinity%' },
+  'Almond Fudge': { '2019-01 to 2019-02': '0.00%', '2019-02 to 2019-03': 'Infinity%' }
+}
